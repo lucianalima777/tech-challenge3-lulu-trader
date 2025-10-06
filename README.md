@@ -1,6 +1,6 @@
 # Tech Challenge 3 - Previsão de Preço do Ouro com ML
 
-Bem-vindo(a)! Este repositório apresenta a solução do **Desafio Técnico da Fase 3 da Pós em Machine Learning Engineering da FIAP**.
+Este repositório apresenta a solução do **Desafio Técnico da Fase 3 da Pós em Machine Learning Engineering da FIAP**.
 Baseado em um desafio familiar bem humorado, decidi juntar meu aprendizado na pós com minha vontade de prever, com meu modelo personalizado e com boa acurácia, o preço do ouro em dólares.
 Aqui, combinei técnicas de coleta de dados, modelagem preditiva e visualização para responder a seguinte pergunta:
 
