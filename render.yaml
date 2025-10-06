@@ -1,4 +1,25 @@
-# Configurações do projeto Lulu Trader
-caminhos:
-  dados_brutos: data/raw/
-  dados_processados: data/processed/
+services:
+  - type: web
+    name: lulu-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.api:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+
+  - type: web
+    name: lulu-dashboard
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app/streamlit_app.py --server.port 10001 --server.headless true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+
+  - type: cron
+    name: lulu-daily-collector
+    env: python
+    schedule: "0 10 * * *"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python cron/app.py
