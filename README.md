@@ -128,29 +128,16 @@ O modelo retorna probabilidades que são convertidas em 3 recomendações:
 
 ## Resultado: Dashboard Interativo
 
-O **Streamlit dashboard** mostra:
+O **Streamlit dashboard** foi publicado na nuvem via Render.com e apresenta:
 
 - Gráfico histórico de preços do último ano
 - Preço atual do ativo
 - **Probabilidades lado a lado:** Chance de alta vs queda
 - **Sinal de trading** com cores intuitivas (verde=BUY, azul=HOLD, vermelho=SELL)
-- Acurácia do modelo (73%) para transparência
+- Acurácia do modelo (72%) para transparência
 
-Ideal para **tomada de decisão visual e rápida**.
-
----
-
-## API Endpoints
-
-A API FastAPI disponibiliza:
-
-- `GET /` - Status da API
-- `GET /coletar-dados` - Coleta novos dados do Yahoo Finance e salva no banco
-- `GET /prever-sinal` - Retorna a previsao atual (BUY/HOLD/SELL)
-
-Acesse a documentacao interativa em `http://localhost:8000/docs` apos iniciar a API.
-
----
+Link para acesso ao dashboard:  
+https://tech-challenge3-lulu-trader-3.onrender.com
 
 ## Dashboard
 
@@ -162,6 +149,34 @@ O dashboard Streamlit apresenta:
 - Probabilidades de alta vs queda
 - Sinal de trading com indicação visual colorida
 - Informações sobre acurácia do modelo
+
+---
+
+## Deploy e Automação
+
+Optei por utilizar a plataforma **Render.com** para o deploy completo do projeto, para facilitar a visualização dos resultados e oferece:
+
+- Suporte a aplicações em Python (FastAPI e Streamlit)
+- Agendamento via cron job
+- Facilidade de gerenciamento via interface web
+
+### Cron Job
+
+O script `cron/app.py` é executado automaticamente:
+
+- **Frequência:** A cada 8 horas (`0 */8 * * *`)
+- **Finalidade:** Atualizar os dados com os preços mais recentes do ouro
+
+---
+## API Endpoints
+
+A API FastAPI disponibiliza:
+
+- `GET /` - Status da API
+- `GET /coletar-dados` - Coleta novos dados do Yahoo Finance e salva no banco
+- `GET /prever-sinal` - Retorna a previsao atual (BUY/HOLD/SELL)
+
+Acesse a documentacao interativa em `http://localhost:8000/docs` apos iniciar a API.
 
 ---
 
