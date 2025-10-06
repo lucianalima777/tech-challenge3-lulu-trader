@@ -44,7 +44,7 @@ Este projeto foi dividido em **módulos**, cada um com seu papel no fluxo de des
 
 ### 1. Clone o projeto
 ```bash
-git clone 
+git clone github.com/lucianalima777/tech-challenge3-lulu-trader
 cd tech-challenge3-ml
 ```
 
