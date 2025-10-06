@@ -141,7 +141,7 @@ https://tech-challenge3-lulu-trader-3.onrender.com
 
 ## Dashboard
 
-O dashboard Streamlit apresenta:
+O dashboard apresenta:
 
 - Gráfico de série temporal do preço do ouro (último ano)
 - Preço atual, máxima e mínima do dia
