@@ -1,0 +1,4 @@
+# Configurações do projeto Lulu Trader
+caminhos:
+  dados_brutos: data/raw/
+  dados_processados: data/processed/
